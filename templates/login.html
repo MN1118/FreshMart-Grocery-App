@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshMart Login</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body class="form-page">
+
+<nav>
+    <h1>FreshMart</h1>
+
+    <div class="nav-links">
+        <a href="/">
+            <i class="fa-solid fa-house"></i>
+            Home
+        </a>
+
+        <a href="/cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+            Cart
+        </a>
+
+        <a href="/register">
+            <i class="fa-solid fa-user-plus"></i>
+            Register
+        </a>
+    </div>
+</nav>
+
+<form class="form-box" action="/login" method="post">
+
+    <h2>
+        <i class="fa-solid fa-user"></i>
+        Login
+    </h2>
+
+    <input
+        type="email"
+        name="email"
+        placeholder="Email Address"
+        required>
+
+    <input
+        type="password"
+        name="password"
+        placeholder="Password"
+        required>
+
+    <button type="submit">
+        Login
+    </button>
+
+    <p style="text-align:center;margin-top:18px;">
+        New user?
+        <a href="/register">Create Account</a>
+    </p>
+
+</form>
+
+</body>
+</html>
